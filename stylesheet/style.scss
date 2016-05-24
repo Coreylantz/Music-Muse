@@ -1,0 +1,327 @@
+@import '_setup.scss';
+
+$babyblue: #8FD3F5;
+$orange: #F66E54;
+$darkblue: #223965;
+$white: #F6FAFC;
+
+$heading: 'Francois One', sans-serif;
+$text: 'Arvo', serif;
+
+
+/*General Styles*/
+
+fieldset {
+	border: none;
+	
+	@media (max-width: 650px) {
+		padding: 0;
+		margin: 0;
+	}
+}
+input[type=checkbox],
+input[type=radio] {
+	display: none;
+}
+
+input[type=checkbox]:checked + label,
+input[type=radio]:checked + label {
+	background: $darkblue;
+}
+
+label,
+input[type=submit] {
+	background: $orange;
+	border: none;
+	color: $white;
+	width: 50%;
+	display: block;
+	font-size: 1.5rem;
+}
+
+
+html {
+	font-size: 62.5%;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	margin: 0;
+}
+
+
+h2 {
+	font-size: 2.5rem;
+	display: inline-block;
+}
+
+p {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+
+
+body {
+	background: $babyblue;
+	font-family: $text;
+	text-align: center;
+}
+
+section,
+article {
+	background: rgba(255,255,255,0.7);
+}
+
+header {
+	width: 100%;
+	color: $white;
+	background: $darkblue;
+	padding: 5%;
+}
+
+img {
+	max-width: 100%;
+}
+
+.circle {
+	display: inline-block;
+	margin: 0 5%;
+	background: $orange;
+	width: 50px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid $white;
+	border-radius: 50%;
+	
+	h3 {
+		padding: 5%;
+		font-size: 2.5rem;
+	}
+
+	&:active {
+		background: $darkblue;
+	}
+}
+// header
+.pageHeader {
+	color: $white;
+	background: $darkblue;
+	padding: 1%;
+	font-size: 5.0rem;
+	text-align: center;
+	font-family: $heading;
+
+	@media (max-width: 425px) {
+		font-size: 3.0rem;
+	}
+}
+
+/*about Styles*/
+	
+.aboutContainer {
+	padding: 5%;
+	.about {
+		padding: 5%;
+	}
+}
+
+/*fieldset Styles*/
+
+.genreSelections {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	text-align: center;
+	padding: 1%;
+
+
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		.circle {
+			position: absolute;
+			left: 0;
+			top: calc(50% - 25px);
+		}
+		@media(max-width: 890px) {
+			.circle {
+				display: none;
+			}
+		}
+	}
+	
+	.genreInputs {
+		width: calc(50% - 4%);
+		display: flex;
+		flex-wrap: wrap;
+		
+
+		label {
+			width: calc(50% - 20px);
+			margin: 10px;
+			padding: 20px;
+		}
+	}
+
+	.timeInputs {
+		width: calc(50% - 4%);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+
+		label {
+			width: 80%;
+			padding: 30px;
+			margin-bottom: 10%;
+			font-size: 1.8rem;
+
+			@media(max-width: 425px) {
+				&:last-child {
+					display: none;
+				}
+			}
+		}
+	}
+
+	.submit {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-top: 20px;
+
+		input {
+			font-size: 2rem;
+			padding: 2.5%;
+			width: 33%;
+			border: 10px solid #F6FAFC;
+			border-radius: 10px;
+
+			&:active {
+				background: $darkblue;
+			}
+		}
+	}
+
+	@media(max-width: 650px){
+		flex-direction: column;
+		padding: 0;
+
+		.genreInputs,
+		.timeInputs {
+			width: 100%;
+		}
+
+		.timeInputs {
+			label {
+				margin: 5% 0;
+			}
+		}
+	}
+}
+
+/* Results styles */
+
+.content {
+
+	header {
+		h2{
+			font-size: 3.5rem;
+		}
+	}
+	
+	#albumGallery {
+		padding: 5%;
+		display: flex;
+		flex-wrap: wrap;
+		background: none;
+
+		@media(max-width: 850px) {
+			padding: 0;
+		}
+
+
+		.albumGalleryItem {
+			background: rgba(255,255,255,0.7);
+			width: calc(33% - 2%);
+			margin: 1%;
+			display: flex;
+			border: 1px solid $white;
+
+			h3 {
+				font-size: 1.5rem;
+			}
+
+			@media(max-width: 700px) {
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+			}
+
+			@media(max-width: 425px) {
+				width: 100%;
+				flex-wrap: nowrap;
+
+				.albumGalleryItemText {
+					width: 50%;
+				}
+			}
+
+			
+			.albumGalleryItemText {
+				width: 50%;
+				padding: 2%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-around;
+				align-items: center;
+
+				.circle {
+					border: none;
+					text-decoration: none;
+					color: $white;
+					font-size: 1.5rem;
+				}
+
+				@media(max-width: 700px) {
+					width: 100%;
+				}
+			}
+
+			.albumArtContainer {
+				width: 50%;
+			}
+			
+		}
+	}
+}
+
+
+// Print stylings
+
+@media print {
+
+	.pageHeader {
+		display: none;
+	}
+
+	.aboutContainer {
+		display: none;
+	}
+
+	.genres {
+		display: none;
+	}
+
+	.circle {
+		display: none;
+	}
+
+	footer {
+		display: none;
+	}
+
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music Muse</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Francois+One|Arvo:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="stylesheet/style.css">
+	
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon-180x180.png">
+	<link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16">
+	<link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96">
+	<link rel="icon" type="image/png" href="images/android-chrome-192x192.png" sizes="192x192">
+	<meta name="msapplication-square70x70logo" content="images/smalltile.png" />
+	<meta name="msapplication-square150x150logo" content="images/mediumtile.png" />
+	<meta name="msapplication-wide310x150logo" content="images/widetile.png" />
+	<meta name="msapplication-square310x310logo" content="images/largetile.png" />
+</head>
+<body>
+	<header class="pageHeader">
+		<h1>Music Muse</h1>
+	</header>
+	<div class="aboutContainer">
+		<article class="about">
+			<p>Music Muse is for the person who is looking to challenge themselves and find new music all in one place. The concept is simple, pick your genres and how long you would like to listen for, Music Muse will then generate an album suggestion for each day!</p>
+		</article>
+	</div>
+	
+	<!-- Start of Inputs  -->
+	<fieldset class="genres">
+		<form action="" class="genreSelections">
+			<section class="genreInputs">
+				<header>
+					<span class="circle">
+						<h3>1</h3>
+					</span>
+					<h2>Select your genres</h2>
+				</header>
+				<input type="checkbox" name="genreTitle" id="Pop" value="Pop">
+				<label for="Pop">Pop</label>
+				<input type="checkbox" name="genreTitle" id="Rock" value="Rock">
+				<label for="Rock">Classic Rock</label>
+				<input type="checkbox" name="genreTitle" id="Rap" value="Rap">
+				<label for="Rap">Rap</label>
+				<input type="checkbox" name="genreTitle" id="Hip-Hop" value="Hip-Hop">
+				<label for="Hip-Hop">Hip-Hop</label>
+				<input type="checkbox" name="genreTitle" id="Country" value="Country">
+				<label for="Country">Country</label>
+				<input type="checkbox" name="genreTitle" id="Indie Rock" value="IndieRock">
+				<label for="Indie Rock">Indie Rock</label>
+				<input type="checkbox" name="genreTitle" id="Jazz" value="Jazz">
+				<label for="Jazz">Jazz</label>
+				<input type="checkbox" name="genreTitle" id="Blues" value="Blues">
+				<label for="Blues">Blues</label>
+				<input type="checkbox" name="genreTitle" id="Heavy Metal" value="metal">
+				<label for="Heavy Metal">Heavy Metal</label>
+				<input type="checkbox" name="genreTitle" id="R&amp;B" value="R&B">
+				<label for="R&amp;B">R&amp;B</label>
+				<input type="checkbox" name="genreTitle" id="Electronic" value="Electronic">
+				<label for="Electronic">Electronic</label>
+				<input type="checkbox" name="genreTitle" id="Classical" value="Classical">
+				<label for="Classical">Classical</label>
+				<!-- <input type="checkbox" name="genreTitle" id="All">
+				<label for="All">All</label> -->
+			</section>
+			<section class="timeInputs">
+				<header>
+					<span class="circle">
+						<h3>2</h3>
+					</span>
+					<h2>How Long?</h2>
+				</header>
+				<input type="radio" name="projectLength" id="week" value="7">
+				<label for="week">Week</label>
+				<input type="radio" name="projectLength" id="month" value="28">
+				<label for="month">Month (28 Days)</label>
+				<input type="radio" name="projectLength" id="year" value="365">
+				<label for="year">Year</label>
+			</section>
+			
+			<div class="submit">
+				<input type="submit" id="submit">
+			</div>
+		</form>
+	</fieldset>
+	<!-- End of Inputs section -->
+
+	<main class="content">
+		<section id="albumGallery">
+			
+		</section>
+	</main>
+
+	<footer>
+		<header>
+			<p>&copy; 2016 Corey Lantz - @coreylantz</p>
+			<p>Thank you to Miguel Bautista</p>
+		</header>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.7.2/jquery.smooth-scroll.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
